@@ -42,6 +42,8 @@ publishArtifact in Test := false
 
 publishMavenStyle := true
 
+pomIncludeRepository := { _ => false }
+
 pomExtra :=
   <scm>
     <url>git@github.com:ensime/sbt-jdi-tools.git</url>
