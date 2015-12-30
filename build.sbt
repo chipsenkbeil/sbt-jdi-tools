@@ -1,7 +1,7 @@
 
 organization := "org.scala-debugger"
 
-name := "scala-debugger-tools-plugin"
+name := "sbt-jdi-tools"
 
 sbtPlugin := true
 
@@ -44,8 +44,8 @@ publishMavenStyle := true
 
 pomExtra :=
   <scm>
-    <url>git@github.com:ensime/scala-debugger-tools-plugin.git</url>
-    <connection>scm:git:git@github.com:ensime/scala-debugger-tools-plugin.git</connection>
+    <url>git@github.com:ensime/sbt-jdi-tools.git</url>
+    <connection>scm:git:git@github.com:ensime/sbt-jdi-tools.git</connection>
   </scm>
     <developers>
       <developer>

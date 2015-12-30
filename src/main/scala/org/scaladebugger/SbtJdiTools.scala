@@ -1,4 +1,4 @@
-package org.scaladebugger.tools.plugin
+package org.scaladebugger
 
 import java.io.FileNotFoundException
 
@@ -11,7 +11,7 @@ import scala.util.Try
  * Represents the main plugin to add tooling settings to projects using
  * libraries from the Scala Debugger project.
  */
-object ScalaDebuggerToolsPlugin extends AutoPlugin {
+object SbtJdiTools extends AutoPlugin {
   override def requires = plugins.JvmPlugin
   override def trigger = allRequirements
 
