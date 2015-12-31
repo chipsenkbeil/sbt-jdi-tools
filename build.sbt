@@ -5,7 +5,7 @@ name := "sbt-jdi-tools"
 
 sbtPlugin := true
 
-version := "1.0.0-SNAPSHOT"
+version := "1.0.0"
 
 licenses += (
   "Apache-2.0",
