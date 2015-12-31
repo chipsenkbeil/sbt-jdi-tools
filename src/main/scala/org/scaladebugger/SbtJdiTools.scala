@@ -15,17 +15,14 @@ object SbtJdiTools extends AutoPlugin {
   override def requires = plugins.JvmPlugin
   override def trigger = allRequirements
 
-  override def projectSettings: Seq[Def.Setting[_]] =
-    inConfig(Compile)(settings) ++
-    inConfig(Runtime)(settings) ++
-    inConfig(Test)(settings)
+  override def projectSettings: Seq[Def.Setting[_]] = inConfig(Compile)(settings)
 
   lazy val settings = baseScalaDebuggerToolsSettings
 
   lazy val baseScalaDebuggerToolsSettings: Seq[Def.Setting[_]] = Seq(
     // JDK Dependency (just for sbt, must exist on classpath for execution,
     // cannot be redistributed)
-    internalDependencyClasspath += { Attributed.blank(JavaTools) }
+    unmanagedJars += { Attributed.blank(JavaTools) }
   )
 
   //

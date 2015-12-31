@@ -44,9 +44,6 @@ publishMavenStyle := true
 
 pomIncludeRepository := { _ => false }
 
-// Disable Scala version in artifact publishing
-crossPaths := false
-
 pomExtra :=
   <scm>
     <url>git@github.com:ensime/sbt-jdi-tools.git</url>
