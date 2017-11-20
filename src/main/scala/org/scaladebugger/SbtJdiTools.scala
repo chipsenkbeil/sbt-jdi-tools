@@ -5,6 +5,8 @@ import java.io.FileNotFoundException
 import sbt._
 import sbt.Keys._
 
+import scala.sys.process._
+
 import scala.util.Try
 
 /**
