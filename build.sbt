@@ -5,7 +5,7 @@ name := "sbt-jdi-tools"
 
 sbtPlugin := true
 
-version := "1.0.0"
+version := "1.1.0"
 
 licenses += (
   "Apache-2.0",
@@ -14,10 +14,10 @@ licenses += (
 
 homepage := Some(url("http://scala-debugger.org"))
 
-scalaVersion := "2.10.5"
+scalaVersion := "2.12.4"
 
 scalacOptions ++= Seq(
-  "-encoding", "UTF-8", "-target:jvm-1.6",
+  "-encoding", "UTF-8", "-target:jvm-1.8",
   "-deprecation", "-unchecked", "-feature",
   "-Xfatal-warnings"
 ) ++ (CrossVersion.partialVersion(scalaVersion.value) match {
@@ -26,7 +26,7 @@ scalacOptions ++= Seq(
 })
 
 javacOptions ++= Seq(
-  "-source", "1.6", "-target", "1.6", "-Xlint:all", "-Werror",
+  "-source", "1.8", "-target", "1.8", "-Xlint:all", "-Werror",
   "-Xlint:-options", "-Xlint:-path", "-Xlint:-processing"
 )
 
