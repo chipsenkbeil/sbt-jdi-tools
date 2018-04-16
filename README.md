@@ -5,9 +5,18 @@ access to the Java Debugger Interface (JDI).
 
 ## Installation
 
+### sbt 1.0
+
 Add the following to `project/plugins.sbt`:
 
 ```scala
 addSbtPlugin("org.scala-debugger" % "sbt-jdi-tools" % "1.1.0")
 ```
 
+### sbt 0.13.x
+
+Add the following to `project/plugins.sbt`:
+
+```scala
+addSbtPlugin("org.scala-debugger" % "sbt-jdi-tools" % "1.0.0")
+```
