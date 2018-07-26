@@ -19,18 +19,23 @@ object SbtJdiTools extends AutoPlugin {
 
   lazy val settings = baseScalaDebuggerToolsSettings
 
-  lazy val baseScalaDebuggerToolsSettings: Seq[Def.Setting[_]] = Seq(
-    // JDK Dependency (just for sbt, must exist on classpath for execution,
-    // cannot be redistributed)
-    unmanagedJars += { Attributed.blank(JavaTools) }
-  )
+  lazy val baseScalaDebuggerToolsSettings: Seq[Def.Setting[_]] =
+    if (System.getProperty("java.specification.version").startsWith("1."))
+      Seq(
+        // JDK Dependency (just for sbt, must exist on classpath for execution,
+        // cannot be redistributed)
+        unmanagedJars += { Attributed.blank(JavaTools) }
+      )
+    else
+      // on Java 9+, we don't need to do anything at all
+      Seq()
 
   //
   // NOTE: Taken from Ensime Server project (when under BSD 3-clause)
   // https://github.com/ensime/ensime-server/blob/master/project/EnsimeBuild.scala
   //
   // WORKAROUND: https://github.com/typelevel/scala/issues/75
-  val JavaTools: File = List(
+  lazy val JavaTools: File = List(
     // manual
     sys.env.get("JDK_HOME"),
     sys.env.get("JAVA_HOME"),
