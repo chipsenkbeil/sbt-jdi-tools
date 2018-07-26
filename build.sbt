@@ -5,7 +5,7 @@ name := "sbt-jdi-tools"
 
 sbtPlugin := true
 
-version := "1.0.0"
+version := "1.0.1"
 
 licenses += (
   "Apache-2.0",
@@ -53,7 +53,7 @@ pomExtra :=
       <developer>
         <id>senkwich</id>
         <name>Chip Senkbeil</name>
-        <url>http://www.chipsenkbeil.org</url>
+        <url>https://www.chipsenkbeil.org</url>
       </developer>
     </developers>
 
